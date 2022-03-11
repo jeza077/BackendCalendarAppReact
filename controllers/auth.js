@@ -15,7 +15,7 @@ const createUser = async(req, res = response) => {
         if( usuario ){
             return res.status(400).json({
                 ok: false,
-                mgs: 'Un usuario ya existe con ese correo'
+                msg: 'Un usuario ya existe con ese correo'
             });
         }
 
@@ -58,7 +58,7 @@ const loginUser = async(req, res = response) => {
         if( !usuario ){
             return res.status(400).json({
                 ok: false,
-                mgs: 'El usuario no existe con ese email.'
+                msg: 'El usuario no existe con ese email.'
             });
         }
 
